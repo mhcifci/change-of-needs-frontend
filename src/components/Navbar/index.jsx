@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './navbar.module.scss';
 import Link from 'next/link';
+import SearchInput from '../SearchInput';
 
 export default function Navbar() {
   return (
@@ -14,7 +15,14 @@ export default function Navbar() {
             alt="Landscape picture"
           />
         </div>
-        <div className={styles.menuArea}>
+        <SearchInput />
+        <div className={styles.rightArea}>
+          <div className={styles.userLoginArea}>
+            <button className={styles.userLogin}>
+              Giriş Yap
+              <div>veya Üye Ol</div>
+            </button>
+          </div>
           <ul className={styles.navMenuList}>
             <li>
               <Link href="#">Homepage</Link>
