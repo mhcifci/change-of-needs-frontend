@@ -1,6 +1,6 @@
+import ListCategories from '@/components/Homepage/ListCategories'
 import Layout from '@/layouts/MainLayout'
 import Head from 'next/head'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,6 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <div className="col-md-12 mt-3">
+          {/* Kategorilerin listelendiği alan */}
+          <ListCategories></ListCategories>
+        </div>
       </Layout>
     </>
   )
